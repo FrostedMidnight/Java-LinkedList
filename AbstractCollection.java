@@ -22,6 +22,14 @@ public abstract class AbstractCollection<E> implements Collection<E> {
         return this.size() == 0;
     }
 
+    @Override
+    //Ensures that this collection contains the specified element (optional operation).
+    public boolean add(E e)
+        throws UnsupportedOperationException, NullPointerException, IllegalArgumentException, IllegalStateException {
+        //This implementation always throws an UnsupportedOperationException.
+        throw new UnsupportedOperationException();
+    }
+
     //Returns a string representation of this collection.
     @Override
     public String toString() {
@@ -31,12 +39,12 @@ public abstract class AbstractCollection<E> implements Collection<E> {
         if (this.isEmpty()) {
             return "[]";
         } else {
-            StringBuilder sb = new StringBuilder("[ ");
+            StringBuilder sb = new StringBuilder("[");
 
             forEach(i -> sb.append(i).append(", "));
 
             int replaceIndex = sb.lastIndexOf(", ");
-            sb.replace(replaceIndex, replaceIndex, "]");
+            sb.replace(replaceIndex, replaceIndex + 1, "]");
 
             return sb.toString();
         }

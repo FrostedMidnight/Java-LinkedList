@@ -15,4 +15,8 @@ public interface Collection<E> extends Iterable<E> {
     //Returns an iterator over the elements in this collection.
     @Override
     Iterator<E> iterator();
+
+    //Ensures that this collection contains the specified element (optional operation).
+    boolean add(E e)
+        throws UnsupportedOperationException, NullPointerException, IllegalArgumentException, IllegalStateException;
 }

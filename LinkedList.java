@@ -22,6 +22,36 @@ public class LinkedList<E> extends AbstractCollection<E> {
         this.head = this.tail = null;
     }
 
+    //Returns the number of elements in this list.
+    @Override
+    public int size() {
+        int count = 0;
+        Iterator<E> it = this.iterator();
+
+        while (it.hasNext()) {
+            count++;
+            it.next();
+        }
+
+        return count;
+    }
+
+    //Appends the specified element to the end of this list.
+    //This method is equivalent to addLast(E).
+    @Override
+    public boolean add(E e) {
+        if (this.isEmpty()) {
+            this.head = new Node<>(e);
+            this.tail = this.head;
+        } else {
+            this.tail.next = new Node<>(e);
+            this.tail.next.prev = this.tail;
+            this.tail = this.tail.next;
+        }
+
+        return true;
+    }
+
     @Override
     public Iterator<E> iterator() {
         return new Iterator<E>() {
@@ -39,18 +69,5 @@ public class LinkedList<E> extends AbstractCollection<E> {
                 return nextE;
             }
         };
-    }
-
-    @Override
-    public int size() {
-        int count = 0;
-        Iterator<E> it = this.iterator();
-
-        while (it.hasNext()) {
-            count++;
-            it.next();
-        }
-
-        return count;
     }
 }
