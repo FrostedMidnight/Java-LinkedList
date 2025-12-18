@@ -1,5 +1,5 @@
 # Java LinkedList
-A reimplement of the Java LinkedList class
+An implementation of the LinkedList data struction based on the Java Documentation.
 
 ## Documentation
 
