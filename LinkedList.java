@@ -127,10 +127,14 @@ public class LinkedList<E> extends AbstractCollection<E> implements Queue<E> {
             }
 
             @Override
-            public E next() {
-                E nextE = current.val;
-                current = current.next;
-                return nextE;
+            public E next() throws NoSuchElementException {
+                if (this.hasNext()) {
+                    E nextE = current.val;
+                    current = current.next;
+                    return nextE;
+                } else {
+                    throw new NoSuchElementException();
+                }
             }
         };
     }
