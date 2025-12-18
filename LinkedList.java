@@ -40,4 +40,17 @@ public class LinkedList<E> extends AbstractCollection<E> {
             }
         };
     }
+
+    @Override
+    public int size() {
+        int count = 0;
+        Iterator<E> it = this.iterator();
+
+        while (it.hasNext()) {
+            count++;
+            it.next();
+        }
+
+        return count;
+    }
 }

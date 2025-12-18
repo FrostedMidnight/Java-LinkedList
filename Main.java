@@ -1,6 +1,8 @@
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Hello World");
+        Collection collection = new LinkedList<>();
+
+        System.out.println(collection);
     }
 }

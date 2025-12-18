@@ -15,4 +15,30 @@ public abstract class AbstractCollection<E> implements Collection<E> {
     //Returns an iterator over the elements contained in this collection.
     @Override
     public abstract Iterator<E> iterator();
+
+    //Returns true if this collection contains no elements.
+    @Override
+    public boolean isEmpty() {
+        return this.size() == 0;
+    }
+
+    //Returns a string representation of this collection.
+    @Override
+    public String toString() {
+        //The string representation consists of a list of the collection's elements in the order they are returned by its iterator, enclosed in square brackets ("[]").
+        //Adjacent elements are separated by the characters ", " (comma and space).
+
+        if (this.isEmpty()) {
+            return "[]";
+        } else {
+            StringBuilder sb = new StringBuilder("[ ");
+
+            forEach(i -> sb.append(i).append(", "));
+
+            int replaceIndex = sb.lastIndexOf(", ");
+            sb.replace(replaceIndex, replaceIndex, "]");
+
+            return sb.toString();
+        }
+    }
 }
