@@ -1,3 +1,4 @@
+package src;
 // https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Deque.html#reversed()
 
 import java.util.NoSuchElementException;

@@ -1,3 +1,4 @@
+package src;
 // https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/SequencedCollection.html
 
 // A collection that has a well-defined encounter order, that supports operations at both ends, and that is reversible.
@@ -5,6 +6,8 @@
 // Given any two elements, one element is either before (closer to the first element) or after (closer to the last element) the other element.
 
 import java.util.NoSuchElementException;
+
+import src.Collection;
 
 public interface SequencedCollection<E> extends Collection<E> {
     // Returns a reverse-ordered view of this collection.

@@ -1,7 +1,6 @@
+package src;
 //https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Iterable.html
 
-//Implementing this interface allows an object to be the target of the enhanced for statement
-//(sometimes called the "for-each loop" statement).
 public interface Iterable<T> {
     //Returns an iterator over elements of type T.
     Iterator<T> iterator();

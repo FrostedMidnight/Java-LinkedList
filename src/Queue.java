@@ -1,8 +1,11 @@
+package src;
 //https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Queue.html
 
 //A collection designed for holding elements prior to processing.
 
 import java.util.NoSuchElementException;
+
+import src.Collection;
 
 public interface Queue<E> extends Collection<E> {
     //Inserts the specified element into this queue if it is possible to do so immediately without violating capacity restrictions,

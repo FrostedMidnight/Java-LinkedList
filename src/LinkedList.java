@@ -1,3 +1,4 @@
+package src;
 // https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/LinkedList.html
 
 // Doubly-linked list implementation of the List and Deque interfaces.
